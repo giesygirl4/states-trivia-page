@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <link rel="stylesheet" href="./semester_project.css" />
+</head>
+<body>
+  <div id="stuff"></div>
+
+  <script id="template" type="page/template">
+
+  <div>
+    <div class="upper-container">
+      <div class="full-map-image">
+
+      <% if (selectedState === null) { %>
+        <img src="./images/full_map_2.jpg"/>
+        <% } else { %>
+          <img src="./images/<%= states[selectedState].location %>"/>
+        <%}%>
+      </div>
+      <div class="states-list">
+        <ul class="states-names">
+        <% states.forEach(function(state, index) { %>
+          <li> <%= state.name %> </li>
+        <% }) %>
+        </ul>
+      </div>
+      <ul class="label-names">
+        <% if (selectedState === null) { %>
+          <li>
+            <div class="label">Nations Capital:</div>
+            <div class="info">Washington D.C.</div>
+          </li>
+          <li>
+            <div class="label">National Bird:</div>
+            <div class="info">Bald Eagle</div>
+          </li>
+          <li>
+            <div class="label">National Flower:</div>
+            <div class="info">Rose</div>
+          </li>
+          <li>
+            <div class="label">Area:</div>
+            <div class="info">3,794,083</div>
+          </li>
+          <li>
+            <div class="label">Founding Date:</div>
+            <div class="info">July 4th, 1776</div>
+          </li>
+          <li>
+            <div class="label">Nickname:</div>
+            <div class="info">The Land of Opportunity</div>
+          </li>
+          <li>
+            <div class="label">Motto:</div>
+            <div class="info">E Pluribus Unum (one from many)</div>
+          </li>
+        <% } else { %>
+          <li>
+            <div class="label">State Capital:</div>
+            <div class="info"><%= states[selectedState].capital %></div>
+          </li>
+          <li>
+            <div class="label">State Bird:</div>
+            <div class="info"><%= states[selectedState].bird %></div>
+          </li>
+          <li>
+            <div class="label">State Flower:</div>
+            <div class="info"><%= states[selectedState].flower %></div>
+          </li>
+          <li>
+            <div class="label">Area:</div>
+            <div class="info"><%= states[selectedState].area %></div>
+          </li>
+          <li>
+            <div class="label">Date of Statehood:</div>
+            <div class="info"><%= states[selectedState].date %></div>
+          </li>
+          <li>
+            <div class="label">Order of Statehood:</div>
+            <div class="info"><%= states[selectedState].order %></div>
+          </li>
+          <li>
+            <div class="label">State Nickname:</div>
+            <div class="info"><%= states[selectedState].nickname %></div>
+          </li>
+          <li>
+            <div class="label">State Motto:</div>
+            <div class="info"><%= states[selectedState].motto %></div>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+    <div class="lower-level">
+      <div class="flag-image">
+        <% if (selectedState === null) { %>
+          <img src="./images/united_states_flag.jpg"/>
+        <% } else { %>
+          <img src="./images/<%= states[selectedState].flag %>"/>
+        <% } %>
+        <div class="buttons">
+          <div class="sort-by-size">
+            <button class="js-ascend">Ascending</button>
+            <button class="js-descend">Descending</button>
+          </div>
+          <div class="sort-by-other">
+            <button class="js-alpha" <img src="./images/light_blue_button.jpg"/>Alphabetical</button>
+            <button class="js-statehood">Statehood Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="maps">
+    <div class="map-T">
+      <% if (selectedState===null) { %>
+        <img src="./images/full_map_terrain.gif"/>
+      <% } else { %>
+        <img src="./images/<%= states[selectedState].terrain %>"/>
+      <% } %>
+    </div>
+    <div class="map-C">
+      <% if (selectedState === null) { %>
+        <img src="./images/full_map_county.gif"/>
+      <% } else { %>
+        <img src="./images/<%= states[selectedState].county %>"/>
+      <% } %>
+    </div>
+  </div>
+  </script>
+<script src="https://unpkg.com/ejs@2.5.6/ejs.min.js"></script>
+<!--EJS GitHub: https://github.com/mde/ejs -->
+<script src="./State_Info.js"></script>
+<script src="./semester_project.js"></script>
+</body>
+</html>

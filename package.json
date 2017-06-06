@@ -1,0 +1,14 @@
+{
+  "name": "semester-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "semester_project.js",
+  "scripts": {
+    "start": "browser-sync start --server --files \"./*\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8"
+  }
+}

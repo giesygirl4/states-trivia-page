@@ -1,0 +1,122 @@
+body {
+  padding: 1em;
+}
+div {
+  outline: 1px dashed black;
+}
+
+
+.upper-container,
+.lower-level {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.maps img {
+  max-width: 100%;
+}
+
+
+.full-map-image img {
+  width: 50vw;
+  min-width: 500px;
+}
+
+.states-list {
+  flex: 1 0 0px;
+  position: relative;
+  min-width: 100px;
+  min-height: 245px;
+}
+
+.states-names {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+.states-names li {
+  cursor: pointer;
+}
+
+.states-names li:hover {
+  background-color: lightGrey;
+}
+
+.label-names {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 220px;
+  flex: 1.5 0 0px;
+  align-self: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.label-names li {
+  display: flex;
+  flex-direction: row;
+  border: 1px dashed black;
+}
+
+
+.label {
+  flex: 1 1 0px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.info {
+  flex: 1 1 0px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.flag-image {
+  display: flex;
+  align-items: flex-start;
+  flex: 1.5 0 0px;
+}
+
+.flag-image img{
+  width: 30vw;
+  margin: 5px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px;
+  border: 10px;
+  flex: 2 0 0;
+}
+
+.buttons button {
+  padding: 5px;
+  margin: 5px;
+  min-width: 110px;
+}
+
+@media (max-width: 880px) {
+  .flag-image img {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 675px) {
+
+  .full-map-image img {
+    min-width: 0px;
+    width: 100%;
+  }
+}

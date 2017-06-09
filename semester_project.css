@@ -1,10 +1,6 @@
 body {
   padding: 1em;
 }
-div {
-  outline: 1px dashed black;
-}
-
 
 .upper-container,
 .lower-level {
@@ -31,6 +27,7 @@ div {
 }
 
 .states-names {
+  border: 1px solid black;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -46,10 +43,11 @@ div {
 }
 
 .states-names li:hover {
-  background-color: lightGrey;
+  background-color: lightgrey;
 }
 
 .label-names {
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -66,6 +64,8 @@ div {
   display: flex;
   flex-direction: row;
   border: 1px dashed black;
+  border-left: none;
+  border-right:  none;
 }
 
 
@@ -102,9 +102,15 @@ div {
 }
 
 .buttons button {
-  padding: 5px;
+  border-radius: 5px;
+  background: linear-gradient(to top, blue, white 40%, white 60%, red);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px;
   margin: 5px;
-  min-width: 110px;
+  width: 175px;
+  height: 40px;
+
 }
 
 @media (max-width: 880px) {

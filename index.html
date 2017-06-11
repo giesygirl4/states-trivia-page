@@ -7,27 +7,27 @@
 <body>
   <div id="stuff"></div>
 
+<!-- template for the pages layout -->
   <script id="template" type="page/template">
 
   <div>
     <div class="upper-container">
       <div class="full-map-image">
-
-      <% if (selectedState === null) { %>
+      <% if (selectedState === null) { %> <!--if no state is selected use the US map-->
         <img src="./images/full_map_2.jpg"/>
-        <% } else { %>
+        <% } else { %> <!-- otherwise show the location image for the selected state-->
           <img src="./images/<%= states[selectedState].location %>"/>
         <%}%>
       </div>
       <div class="states-list">
         <ul class="states-names">
         <% states.forEach(function(state, index) { %>
-          <li> <%= state.name %> </li>
+          <li> <%= state.name %> </li> <!-- show each of the states as a line item -->
         <% }) %>
         </ul>
       </div>
       <ul class="label-names">
-        <% if (selectedState === null) { %>
+        <% if (selectedState === null) { %> <!-- if no state is selected show the information for the US -->
           <li>
             <div class="label">Nations Capital:</div>
             <div class="info">Washington D.C.</div>
@@ -56,7 +56,7 @@
             <div class="label">Motto:</div>
             <div class="info">E Pluribus Unum (one from many)</div>
           </li>
-        <% } else { %>
+        <% } else { %> <!-- otherwise show the information for the selected state -->
           <li>
             <div class="label">State Capital:</div>
             <div class="info"><%= states[selectedState].capital %></div>
@@ -94,21 +94,19 @@
     </div>
     <div class="lower-level">
       <div class="flag-image">
-        <% if (selectedState === null) { %>
+        <% if (selectedState === null) { %> <!-- show the US flag -->
           <img src="./images/united_states_flag.jpg"/>
-        <% } else { %>
+        <% } else { %> <!-- show the selected states flag -->
           <img src="./images/<%= states[selectedState].flag %>"/>
         <% } %>
         <div class="buttons">
           <div class="sort-by-size">
-            <button class="js-ascend">Ascending</button>
-            <button class="js-descend">Descending</button>
+            <button class="js-ascend">Ascending</button> <!-- button to sort in ascending order -->
+            <button class="js-descend">Descending</button> <!-- button to sort in descending order -->
           </div>
           <div class="sort-by-other">
-            <button class="js-alpha">
-              Alphabetical
-            </button>
-            <button class="js-statehood">Statehood Order</button>
+            <button class="js-alpha">Alphabetically</button> <!-- button to sort in alphabetical order -->
+            <button class="js-statehood">Statehood Order</button> <!-- button to sort in statehood order -->
           </div>
         </div>
       </div>
@@ -116,16 +114,16 @@
   </div>
   <div class="maps">
     <div class="map-T">
-      <% if (selectedState===null) { %>
+      <% if (selectedState===null) { %> <!--US terrain map -->
         <img src="./images/full_map_terrain.gif"/>
-      <% } else { %>
+      <% } else { %> <!-- sele states terrain map -->
         <img src="./images/<%= states[selectedState].terrain %>"/>
       <% } %>
     </div>
     <div class="map-C">
-      <% if (selectedState === null) { %>
+      <% if (selectedState === null) { %> <!-- US state map -->
         <img src="./images/full_map_county.gif"/>
-      <% } else { %>
+      <% } else { %> <!-- selected states county map -->
         <img src="./images/<%= states[selectedState].county %>"/>
       <% } %>
     </div>

@@ -1,3 +1,4 @@
+// An array of objects with the info about the states
 var data = {
   states: [
     {

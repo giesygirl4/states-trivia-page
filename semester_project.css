@@ -95,9 +95,9 @@ body {
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
-  padding: 10px;
-  border: 10px;
+  margin: 0px 10px;
+  padding: 0px 10px;
+  border: 0px 10px;
   flex: 2 0 0;
 }
 
@@ -107,15 +107,25 @@ body {
   font-size: 20px;
   font-weight: bold;
   padding: 0px;
-  margin: 5px;
+  margin: 141px 30px;
   width: 175px;
   height: 40px;
 
 }
 
+@media (max-width: 1518px) {
+  .buttons button {
+    margin: 30px 40px;
+  }
+}
+
 @media (max-width: 880px) {
   .flag-image img {
     width: 40vw;
+  }
+
+  .buttons button {
+    margin: 10px 20px;
   }
 }
 
@@ -124,5 +134,9 @@ body {
   .full-map-image img {
     min-width: 0px;
     width: 100%;
+  }
+
+  .buttons button {
+    margin: 5px 20px;
   }
 }

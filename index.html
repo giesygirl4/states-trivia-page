@@ -41,8 +41,20 @@
             <div class="info">Rose</div>
           </li>
           <li>
-            <div class="label">Area:</div>
-            <div class="info">3,794,083</div>
+            <div class="label">Total Area:</div>
+            <div class="info">3,796,742</div>
+          </li>
+          <li>
+            <div class="label">Land Area:</div>
+            <div class="info">3,531,905</div>
+          </li>
+          <li>
+            <div class="label">Population:</div>
+            <div class="info">321,418,820</div>
+          </li>
+          <li>
+            <div class="label">Population Density:</div>
+            <div class="info"><%= (321418820 / 3531905).toFixed(0) %> people per square mile</div>
           </li>
           <li>
             <div class="label">Founding Date:</div>
@@ -70,8 +82,20 @@
             <div class="info"><%= states[selectedState].flower %></div>
           </li>
           <li>
-            <div class="label">Area:</div>
-            <div class="info"><%= states[selectedState].area %></div>
+            <div class="label">Total Area:</div>
+            <div class="info"><%= (new Intl.NumberFormat().format(states[selectedState].area)) %></div>
+          </li>
+          <li>
+            <div class="label">Land Area:</div>
+            <div class="info"><%= (new Intl.NumberFormat().format(states[selectedState].land_area)) %></div>
+          </li>
+          <li>
+            <div class="label">Population:</div>
+            <div class="info"><%= (new Intl.NumberFormat().format(states[selectedState].population)) %></div>
+          </li>
+          <li>
+            <div class="label">Population Density:</div>
+            <div class="info"><%= (new Intl.NumberFormat().format((states[selectedState].population / states[selectedState].land_area).toFixed(2))) %> people per square mile</div>
           </li>
           <li>
             <div class="label">Date of Statehood:</div>
